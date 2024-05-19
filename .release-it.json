@@ -5,6 +5,6 @@
   },
   "hooks": {
     "before:init": ["git pull origin main"],
-    "after:bump": "npx auto-changelog -p"
+    "after:bump": "npm run changelog-update && git add . && git commit -m 'updated changelog file'"
   }
 }
